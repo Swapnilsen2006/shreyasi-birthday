@@ -69,11 +69,9 @@ body{
   display:flex;align-items:center;justify-content:center;
   box-shadow:0 12px 30px rgba(70,20,40,0.1);
 }
-.photo-box img{
-  width:100%;
-  height:100%;
-  object-fit:cover;
-  object-position:50% 10%;
+/* Force the HOME image to show the top area (face visible) */
+#home .photo-box img{
+  object-position:50% 0%;
 }
 
 /* Message lines animation */
