@@ -108,6 +108,23 @@ body{
   .photo-box{width:260px;height:340px}
   .big-title{font-size:36px}
 }
+  /* ==== FIX HOME PHOTO (show full image, no crop) ==== */
+#home .photo-box{
+  height: auto !important;
+}
+
+#home .photo-box img{
+  display: block;
+  width: 100%;
+  height: auto !important;
+  object-fit: contain !important;
+  object-position: 50% 0% !important;
+  background: #fff;
+}
+
+@media (max-width: 720px){
+  #home .photo-box{ height: auto !important; }
+}
 </style>
 </head>
 
