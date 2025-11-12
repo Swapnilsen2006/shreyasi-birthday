@@ -1,0 +1,293 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width,initial-scale=1.0" />
+<title>Happy 14th Birthday Shreyasi ✨</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Nunito:wght@300;400;700;900&display=swap" rel="stylesheet" />
+
+<style>
+/*  ----  BASIC THEME  ----  */
+:root{
+  --bg1:#ffd8e8;--bg2:#f3e6ff;--accent:#ff9ac2;--gold:#ffd166;--text:#2b2430;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+body{
+  font-family:'Nunito',sans-serif;
+  color:var(--text);
+  background: linear-gradient(180deg,var(--bg1),var(--bg2));
+  overflow-x:hidden;
+}
+
+/* NAVBAR */
+.navbar{
+  position:fixed;top:18px;left:50%;transform:translateX(-50%);
+  display:flex;gap:12px;padding:6px 14px;
+  background:rgba(255,255,255,0.5);
+  backdrop-filter:blur(8px);
+  border-radius:999px;z-index:50;
+}
+.navbar a{
+  text-decoration:none;font-weight:700;color:var(--text);
+  padding:8px 14px;border-radius:999px;
+}
+.navbar a.active{
+  background:linear-gradient(90deg,var(--accent),var(--gold));
+  color:white;box-shadow:0 6px 18px rgba(255,150,180,0.18);
+}
+
+.container{
+  max-width:980px;margin:120px auto 30px;padding:20px;
+}
+
+/* Sections */
+.section{
+  margin-bottom:30px;
+  padding:48px;
+  background:rgba(255,255,255,0.6);
+  border-radius:18px;
+  backdrop-filter:blur(6px);
+  box-shadow:0 12px 30px rgba(0,0,0,0.04);
+}
+
+/* HOME */
+.big-title{
+  font-size:42px;font-weight:900;line-height:1.1;
+  background:linear-gradient(90deg,#fff,#ffe0f0);
+  -webkit-background-clip:text;
+  background-clip:text;color:transparent;
+}
+.small-caption{opacity:0.8;font-weight:600;margin-top:10px}
+.row{display:flex;flex-wrap:wrap;gap:25px}
+
+/* Photo cards */
+.photo-box{
+  width:320px;height:420px;
+  border-radius:18px;overflow:hidden;
+  border:6px solid rgba(255,255,255,0.5);
+  display:flex;align-items:center;justify-content:center;
+  box-shadow:0 12px 30px rgba(70,20,40,0.1);
+}
+.photo-box img{
+  width:100%;height:100%;object-fit:cover;
+}
+
+/* Message lines animation */
+.message-line{
+  opacity:0;transform:translateY(10px);
+  transition:all 700ms cubic-bezier(.2,.9,.2,1);
+  margin-bottom:12px;font-size:18px;
+}
+.message-line.show{
+  opacity:1;transform:translateY(0);
+}
+
+/* Start overlay */
+.start-overlay{
+  position:fixed;inset:0;z-index:100;
+  display:flex;align-items:center;justify-content:center;
+  background:rgba(0,0,0,0.25);
+  backdrop-filter:blur(4px);
+}
+.start-button{
+  background:linear-gradient(90deg,var(--accent),var(--gold));
+  color:#fff;padding:18px 26px;border:none;border-radius:999px;
+  font-size:18px;font-weight:900;
+  box-shadow:0 12px 30px rgba(255,150,180,0.25);
+}
+
+.footer{text-align:center;margin-top:10px;opacity:0.8;font-size:14px}
+
+@media(max-width:720px){
+  .photo-box{width:260px;height:340px}
+  .big-title{font-size:36px}
+}
+</style>
+</head>
+
+<body>
+
+<!-- NAV -->
+<nav class="navbar">
+  <a href="#home"   data-target="home"   class="active">Home</a>
+  <a href="#memories" data-target="memories">Memories</a>
+  <a href="#message" data-target="message">Message</a>
+  <a href="#wishes"  data-target="wishes">Final Wishes</a>
+</nav>
+
+<!-- START OVERLAY -->
+<div class="start-overlay" id="startOverlay">
+  <div style="text-align:center">
+    <h2 style="color:#fff;font-size:24px;margin-bottom:10px">
+      Happy 14th Birthday, Shreyasi ✨
+    </h2>
+    <p style="color:#fff;opacity:0.9;margin-bottom:14px">
+      Tap to begin — music & magic will start ✨
+    </p>
+    <button id="startBtn" class="start-button">Click to Begin</button>
+  </div>
+</div>
+
+<!-- AUDIO -->
+<audio id="bgAudio" preload="auto" playsinline>
+  <source src="aashiyan.mp3" type="audio/mpeg" />
+</audio>
+
+<!-- MAIN -->
+<main class="container">
+
+<!-- HOME -->
+<section id="home" class="section">
+  <div class="row">
+    <div style="flex:1">
+      <h2 style="font-size:24px;margin-bottom:6px">Happy 14th Birthday</h2>
+      <h1 class="big-title">
+        My Dear Soul Sister<br>Shreyasi ✨
+      </h1>
+      <p class="small-caption">
+        With all my love — <strong>Swapnil (Dadabhai)</strong>
+      </p>
+    </div>
+
+    <!-- HOME PHOTO -->
+    <div class="photo-box">
+      <img src="shreyasi_home.jpg" alt="Photo">
+    </div>
+  </div>
+</section>
+
+
+<!-- MEMORIES -->
+<section id="memories" class="section">
+  <h2 style="font-size:24px;margin-bottom:14px">Memories</h2>
+  <div class="row">
+    <div style="flex:1;min-width:220px">
+      <p style="font-size:18px;font-weight:700;margin-bottom:6px">
+        From this cute smile…
+      </p>
+      <p>
+        Everything began with a little giggle and a bright shining smile.
+        Watching you grow has been one of the greatest joys.
+      </p>
+    </div>
+
+    <!-- CHILD PHOTO -->
+    <div class="photo-box" style="width:300px;height:300px">
+      <img src="shreyasi_child.jpg" alt="Childhood">
+    </div>
+  </div>
+</section>
+
+
+<!-- MESSAGE -->
+<section id="message" class="section">
+  <h2 style="font-size:24px;margin-bottom:14px">A Message for You</h2>
+  <div id="messageBox"></div>
+</section>
+
+
+<!-- FINAL WISHES -->
+<section id="wishes" class="section">
+  <h2 style="font-size:24px;margin-bottom:14px">Final Wishes</h2>
+  <p style="font-size:18px">
+    With all my love,<br>
+    <strong>Swapnil (Dadabhai)</strong>
+  </p>
+  <p style="opacity:0.85;margin-top:10px">
+    May your life be filled with happiness, laughter, and endless sunshine.  
+    Happy Birthday, my dear sister!
+  </p>
+</section>
+
+<div class="footer">
+  Audio loops 00:43 → 01:42. Best viewed in Chrome.
+</div>
+
+</main>
+
+
+<script>
+// Smooth nav
+document.querySelectorAll('.navbar a').forEach(a=>{
+  a.addEventListener('click',e=>{
+    e.preventDefault();
+    document.querySelectorAll('.navbar a').forEach(x=>x.classList.remove('active'));
+    a.classList.add('active');
+    document.getElementById(a.dataset.target).scrollIntoView({behavior:'smooth'});
+  });
+});
+
+// Audio — LOOP SEGMENT
+const audio = document.getElementById("bgAudio");
+const START = 43;
+const END   = 102;
+
+audio.addEventListener("loadedmetadata",()=>{
+  if(audio.duration > START){
+    audio.currentTime = START;
+  }
+});
+audio.addEventListener("timeupdate",()=>{
+  if(audio.currentTime >= END){
+    audio.currentTime = START;
+  }
+});
+
+// Start overlay
+const startOverlay = document.getElementById("startOverlay");
+document.getElementById("startBtn").onclick = ()=>{
+  startOverlay.style.display="none";
+  try{
+    audio.currentTime = START;
+    let p = audio.play();
+    if(p && p.then) p.catch(()=>{});
+  }catch(e){}
+};
+
+// Message
+const lines = [
+  "February 22, 2025 — the day our paths first crossed on Instagram.",
+  "I felt something special about you — a soft spark I could not ignore.",
+  "You are lovely, caring, warm-hearted, and wonderfully trustworthy.",
+  "Even at only fourteen, you face life’s challenges with courage.",
+  "You smile to make others believe you are okay, even when you carry pain inside.",
+  "And deep within, I felt you needed someone… someone who truly understood.",
+  "In that moment I thought — why not me?",
+  "I needed someone too — someone I could trust with everything in my heart.",
+  "So I chose you as my sister… and you made me your Dadabhai.",
+  "Since then, we’ve stood side-by-side, supporting each other each day.",
+  "We haven’t met in person yet, but that day isn’t far — I will make it real.",
+  "My dear sister, may your life be filled with joy, laughter, and peace.",
+  "If ever something troubles your heart — remember, I’m always here for you.",
+  "I will love and support you from the bottom of my heart.",
+  "Happy Birthday, my dear soul sister, Shreyasi!",
+  "May God bless you with every happiness. I promise to be by your side till my last breath."
+];
+
+const box = document.getElementById("messageBox");
+lines.forEach((t,i)=>{
+  let d = document.createElement("div");
+  d.className="message-line";
+  d.innerText=t;
+  box.appendChild(d);
+});
+
+// Reveal when section in view
+let once = false;
+function check(){
+  if(once) return;
+  const rect = document.getElementById("message").getBoundingClientRect();
+  if(rect.top < window.innerHeight - 80){
+    once = true;
+    document.querySelectorAll(".message-line").forEach((el,i)=>{
+      setTimeout(()=>el.classList.add("show"), i*260);
+    });
+  }
+}
+window.addEventListener("scroll",check);
+window.addEventListener("load",check);
+</script>
+
+</body>
+</html>
